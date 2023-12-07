@@ -24,7 +24,7 @@ export default function CardItem(props: CardItemProps) {
     link_github,
   } = props;
   return (
-    <article className="w-[23.5rem] h-[22.77rem] rounded-lg overflow-hidden flex flex-col relative">
+    <article className="sm:w-[23.5rem] w-[19.75rem] h-[22.77rem] rounded-lg overflow-hidden flex flex-col relative">
       <div className="absolute right-0 top-0 flex items-center p-1.5 gap-1.5 bg-[#bef264] rounded-bl-lg z-10">
         <Pin size={14} color="black " className="rotate-45" />
         <span className="text-sm text-black">Featured</span>
