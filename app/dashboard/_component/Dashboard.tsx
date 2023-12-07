@@ -3,7 +3,13 @@ import { GITHUB_ACCOUNTS } from "@/app/common/constant/github";
 
 import Contributions from "./Contributions";
 
-const Dashboard = () => {
+type DashboardProps = {
+  data: {
+    contributionsCollection: { contributionCalendar: any };
+  };
+};
+
+const Dashboard = ({ data }: DashboardProps) => {
   return (
     <>
       <div className="space-y-10">
@@ -14,6 +20,7 @@ const Dashboard = () => {
               username={account?.username}
               type={account?.type}
               endpoint={account?.endpoint}
+              data={data}
             />
           )
         )}

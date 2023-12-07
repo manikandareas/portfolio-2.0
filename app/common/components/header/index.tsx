@@ -33,7 +33,11 @@ export default function Header({}: Props) {
   return (
     <>
       {isMobile && (
-        <header className={cn("flex items-center sticky top-0 z-50 border-b")}>
+        <header
+          className={cn(
+            "bg-background flex items-center sticky top-0 z-50 border-b"
+          )}
+        >
           <div className="flex justify-between w-full p-4">
             <div className="flex items-center gap-4">
               <Avatar>
@@ -96,25 +100,26 @@ export default function Header({}: Props) {
                     <div className="w-full flex-col flex gap-1">
                       {filteredMenu?.map((item, index) => (
                         <Link
-                          key={index}
+                          key={index + item.title}
                           href={item.href}
-                          onClick={() => setIsDropdownOpen(false)}
                           className={cn(
-                            "text-neutral-700 group hover:text-neutral-800 dark:text-neutral-400 hover:dark:text-neutral-100 flex items-center justify-between px-4 py-2 rounded-lg hover:bg-neutral-800/20 dark:hover:bg-neutral-900",
-                            pathname === item?.href &&
-                              "!text-neutral-800 dark:!text-neutral-100"
+                            "text-neutral-700 group hover:text-neutral-800 dark:text-neutral-400 hover:dark:text-neutral-100 flex items-center justify-between px-4 py-2 rounded-lg hover:bg-neutral-800/20 dark:hover:bg-neutral-900 hover:scale-105 transition-all ease-in-out",
+                            pathname === item.href &&
+                              "!text-neutral-800 dark:!text-neutral-100 bg-neutral-800/20 dark:bg-neutral-900"
                           )}
                         >
                           <div className="flex items-center gap-1.5">
-                            <i className="group-hover:rotate-45 transition-all ease-in-out">
+                            <i className="group-hover:-rotate-12 transition-all ease-in-out">
                               {item.icon}
                             </i>
                             <span>{item.title}</span>
                           </div>
-                          <FaArrowRight
-                            size={12}
-                            className={"text-neutral-700 animate-pulse"}
-                          />
+                          {pathname === item.href ? (
+                            <FaArrowRight
+                              size={12}
+                              className={"text-neutral-700 animate-pulse"}
+                            />
+                          ) : null}
                         </Link>
                       ))}
                     </div>

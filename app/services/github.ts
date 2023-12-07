@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import { GITHUB_ACCOUNTS } from "../common/constant/github";
+import { unstable_cache } from "next/cache";
 
 const GITHUB_USER_ENDPOINT = "https://api.github.com/graphql";
 
@@ -68,3 +69,11 @@ export const getGithubUser = async (type: string) => {
   const { username, token } = account;
   return await fetchGithubData(username, token);
 };
+
+export const fetchGithubUser = unstable_cache(
+  async () => await getGithubUser("personal"),
+  ["github-user-profile"],
+  {
+    revalidate: 1000 * 60 * 60 * 24,
+  }
+);

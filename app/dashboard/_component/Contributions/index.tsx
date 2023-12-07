@@ -7,30 +7,19 @@ import SectionSubHeading from "@/app/common/components/SectionSubHeading";
 
 import Calendar from "./Calendar";
 import Overview from "./Overview";
-import { useQuery } from "@tanstack/react-query";
-import { getGithubUser } from "@/app/services/github";
 
 type ContributionsProps = {
   username: string;
   type: string;
   endpoint: string;
+  data: {
+    contributionsCollection: { contributionCalendar: any };
+  };
 };
 
-const Contributions = ({ username }: ContributionsProps) => {
-  const { data } = useQuery({
-    queryKey: ["github-user-profile"],
-    queryFn: async () => {
-      const response = await getGithubUser("personal");
-      return response;
-    },
-    refetchIntervalInBackground: false,
-    refetchOnWindowFocus: false,
-    staleTime: 1000 * 60 * 60 * 24,
-  });
-
+const Contributions = ({ username, data }: ContributionsProps) => {
   const contributionCalendar =
-    data?.data.contributionsCollection.contributionCalendar;
-  console.log(contributionCalendar);
+    data?.contributionsCollection.contributionCalendar;
 
   return (
     <section className="flex flex-col gap-y-2">
