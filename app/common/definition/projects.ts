@@ -1,3 +1,5 @@
+import { STACKS } from "../constant/stacks";
+
 export interface ProjectItemProps {
   title: string;
   slug: string;
@@ -5,7 +7,8 @@ export interface ProjectItemProps {
   image: string;
   link_demo?: string;
   link_github?: string;
-  stacks: string;
+  stacks: JSX.Element[];
+  created_at: Date;
   content?: string;
   is_show: boolean;
   is_featured: boolean;

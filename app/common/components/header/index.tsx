@@ -102,6 +102,7 @@ export default function Header({}: Props) {
                         <Link
                           key={index + item.title}
                           href={item.href}
+                          onClick={() => setIsDropdownOpen(false)}
                           className={cn(
                             "text-neutral-700 group hover:text-neutral-800 dark:text-neutral-400 hover:dark:text-neutral-100 flex items-center justify-between px-4 py-2 rounded-lg hover:bg-neutral-800/20 dark:hover:bg-neutral-900 hover:scale-105 transition-all ease-in-out",
                             pathname === item.href &&
