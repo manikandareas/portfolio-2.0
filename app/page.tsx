@@ -1,7 +1,13 @@
+import Introduction from "./_component/Introduction";
+import Skills from "./_component/Skills";
+import { Separator } from "./common/components/ui/separator";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hello</h1>
-    </main>
+    <div data-aos="fade-up" className="space-y-6 p-8">
+      <Introduction />
+      <Separator />
+      <Skills />
+    </div>
   );
 }
