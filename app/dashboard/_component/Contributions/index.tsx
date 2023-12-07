@@ -23,6 +23,9 @@ const Contributions = ({ username }: ContributionsProps) => {
       const response = await getGithubUser("personal");
       return response;
     },
+    refetchIntervalInBackground: false,
+    refetchOnWindowFocus: false,
+    staleTime: 1000 * 60 * 60 * 24,
   });
 
   const contributionCalendar =
