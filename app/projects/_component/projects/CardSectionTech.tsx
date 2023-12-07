@@ -1,14 +1,19 @@
 import React from "react";
 import { STACKS } from "@/app/common/constant/stacks";
+import { Tooltip } from "@/app/common/components/Tooltip";
 type CardSectionTechProps = {
-  icon: JSX.Element[];
+  stacks: string[];
 };
 
-export default function CardSectionTech({ icon }: CardSectionTechProps) {
+export default function CardSectionTech({ stacks }: CardSectionTechProps) {
   return (
     <ul className="flex gap-4">
-      {icon.map((tech, index) => {
-        return <li key={index}>{tech}</li>;
+      {stacks.map((tech, index) => {
+        return (
+          <li title={tech} key={index + tech}>
+            <Tooltip icon={STACKS[tech]} title={tech} />
+          </li>
+        );
       })}
     </ul>
   );

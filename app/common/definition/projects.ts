@@ -7,7 +7,7 @@ export interface ProjectItemProps {
   image: string;
   link_demo?: string;
   link_github?: string;
-  stacks: JSX.Element[];
+  stacks: string[];
   created_at: Date;
   content?: string;
   is_show: boolean;
