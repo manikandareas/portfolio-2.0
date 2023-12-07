@@ -61,7 +61,6 @@ export const getGithubUser = async (type: string) => {
   const account = GITHUB_ACCOUNTS.find(
     (account) => account?.type === type && account?.is_active
   );
-  console.log(account?.token);
   if (!account) {
     throw new Error("Invalid user type");
   }

@@ -42,7 +42,7 @@ export const STACKS: stacksProps = {
   "Vue.js": <SiVuedotjs size={iconSize} className="text-green-500" />,
   "Nuxt.js": <SiNuxtdotjs size={iconSize} className="text-green-400" />,
   "Node.js": <SiNodedotjs size={iconSize} className="text-green-600" />,
-  Redux: <SiRedux size={iconSize} className="text-purple-500" />,
+  "Redux Toolkit": <SiRedux size={iconSize} className="text-purple-500" />,
   PWA: <SiPwa size={iconSize} className="text-amber-600" />,
   Nginx: <SiNginx size={iconSize} className="text-green-500" />,
   CSS: <SiCss3 size={iconSize} className="text-blue-300" />,
