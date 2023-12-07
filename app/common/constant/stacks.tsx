@@ -11,9 +11,11 @@ import {
   SiPrisma,
   SiPwa,
   SiReact,
+  SiReactquery,
   SiRedux,
   SiSupabase,
   SiTailwindcss,
+  SiTrpc,
   SiTypescript,
   SiVite,
   SiVuedotjs,
@@ -48,4 +50,6 @@ export const STACKS: stacksProps = {
   CSS: <SiCss3 size={iconSize} className="text-blue-300" />,
   Express: <SiExpress size={iconSize} />,
   "Shadcn ui": <SiHelpscout size={iconSize} className="text-black" />,
+  Trpc: <SiTrpc size={iconSize} className="text-blue-500" />,
+  "Tanstack Query": <SiReactquery size={iconSize} className="text-red-500" />,
 };

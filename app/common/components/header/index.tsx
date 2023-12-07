@@ -41,7 +41,7 @@ export default function Header({}: Props) {
           <div className="flex justify-between w-full p-4">
             <div className="flex items-center gap-4">
               <Avatar>
-                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarImage src="/vitomanik.jpg" />
                 <AvatarFallback>Manik</AvatarFallback>
               </Avatar>
 
@@ -70,7 +70,7 @@ export default function Header({}: Props) {
                     <SheetTitle className="flex justify-between">
                       <div className="flex-col flex gap-4">
                         <Avatar className="w-20 h-20">
-                          <AvatarImage src="https://github.com/shadcn.png" />
+                          <AvatarImage src="/vitomanik.jpg" />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
 

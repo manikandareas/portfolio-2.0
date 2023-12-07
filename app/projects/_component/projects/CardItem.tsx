@@ -5,6 +5,7 @@ import { cn } from "@/app/common/libs/utils";
 import { jakartaSans } from "@/app/common/libs/fonts";
 import { Pin } from "lucide-react";
 import { ProjectItemProps } from "@/app/common/definition/projects";
+import Image from "next/image";
 
 type CardItemProps = ProjectItemProps & {};
 
@@ -24,15 +25,27 @@ export default function CardItem(props: CardItemProps) {
     link_github,
   } = props;
   return (
-    <article className="sm:w-[23.5rem] w-[19.75rem] h-[22.77rem] rounded-lg overflow-hidden flex flex-col relative">
-      <div className="absolute right-0 top-0 flex items-center p-1.5 gap-1.5 bg-[#bef264] rounded-bl-lg z-10">
-        <Pin size={14} color="black " className="rotate-45" />
-        <span className="text-sm text-black">Featured</span>
-      </div>
-      <Skeleton className="w-full h-[12rem]"></Skeleton>
+    <article className="sm:w-[23.5rem] w-[19.75rem] h-[22.77rem] hover:scale-105 border transition-all ease-in-out duration-300 rounded-lg overflow-hidden flex flex-col relative cursor-pointer">
+      {is_featured ? (
+        <div className="absolute right-0 top-0 flex items-center p-1.5 gap-1.5 bg-[#bef264] rounded-bl-lg z-10">
+          <Pin size={14} color="black " className="rotate-45" />
+          <span className="text-sm text-black">Featured</span>
+        </div>
+      ) : null}
+      {image ? (
+        <Image
+          src={image}
+          alt={title}
+          height={192}
+          width={376}
+          objectFit="cover"
+        />
+      ) : (
+        <Skeleton className="w-full h-[12rem]" />
+      )}
       <div
         className={cn(
-          "flex-1 bg-primary-foreground p-4 space-y-3",
+          "flex-1 bg-primary-foreground p-4 space-y-2",
           jakartaSans.className
         )}
       >
