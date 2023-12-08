@@ -5,12 +5,24 @@ import React from "react";
 import { FiArrowLeftCircle as BackButtonIcon } from "react-icons/fi";
 import ProjectDetail from "./_component/ProjectDetail";
 import { projects } from "@/app/common/constant/projects";
+import { Metadata, ResolvingMetadata } from "next";
 
 type ProjectsDetailPageProps = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params,
+}: ProjectsDetailPageProps): Promise<Metadata> {
+  const project = projects.filter((item) => item.slug === params.slug)[0];
+
+  return {
+    title: project.title,
+    description: project.description,
+  };
+}
 
 export default function ProjectsDetailPage({
   params,
