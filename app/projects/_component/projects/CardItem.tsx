@@ -61,7 +61,10 @@ export default function CardItem(props: CardItemProps) {
           )}
         >
           <h1 className="font-semibold text-primary">{title}</h1>
-          <p className="text-muted-foreground tracking-[3px]s">{description}</p>
+          <p
+            className="text-muted-foreground tracking-[3px]s"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <CardSectionTech stacks={stacks} />
         </div>
       </article>

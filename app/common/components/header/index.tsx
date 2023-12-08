@@ -41,7 +41,7 @@ export default function Header({}: Props) {
           <div className="flex justify-between w-full p-4">
             <div className="flex items-center gap-4">
               <Avatar>
-                <AvatarImage src="/vitomanik.jpg" />
+                <AvatarImage src="/vitomanik.jpg" alt="Manik" />
                 <AvatarFallback>Manik</AvatarFallback>
               </Avatar>
 
@@ -58,7 +58,7 @@ export default function Header({}: Props) {
             <div className={cn("flex gap-4 items-center")}>
               <ModeToggle />
               <Sheet open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
-                <SheetTrigger>
+                <SheetTrigger aria-label="Open menu">
                   <FaBars
                     size={20}
                     className="cursor-pointer"
