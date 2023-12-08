@@ -70,7 +70,11 @@ export default function Header({}: Props) {
                     <SheetTitle className="flex justify-between">
                       <div className="flex-col flex gap-4">
                         <Avatar className="w-20 h-20">
-                          <AvatarImage src="/vitomanik.webp" />
+                          <AvatarImage
+                            src="/vitomanik.webp"
+                            width={80}
+                            height={80}
+                          />
                           <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
 
