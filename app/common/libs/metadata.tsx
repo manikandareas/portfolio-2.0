@@ -18,5 +18,5 @@ export const NextMetadata: Metadata = {
     template: `%s | Vito Manik`,
   },
   description:
-    "Travel Blog for the Adventurous: Read about Our Adventures and Get Inspired to Explore",
+    "Personal website Vito Andareas Manik, build with Next.js, Shadncn UI, and TailwindCSS.",
 };
