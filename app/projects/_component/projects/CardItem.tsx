@@ -7,7 +7,6 @@ import { ArrowRight, Pin } from "lucide-react";
 import { ProjectItemProps } from "@/app/common/definition/projects";
 import Image from "next/image";
 import Link from "next/link";
-import { STACKS } from "@/app/common/constant/stacks";
 type CardItemProps = ProjectItemProps & {};
 
 export default function CardItem(props: CardItemProps) {
