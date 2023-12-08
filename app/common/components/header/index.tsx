@@ -41,7 +41,12 @@ export default function Header({}: Props) {
           <div className="flex justify-between w-full p-4">
             <div className="flex items-center gap-4">
               <Avatar>
-                <AvatarImage src="/vitomanik.webp" alt="Manik" />
+                <AvatarImage
+                  src="/vitomanik.webp"
+                  alt="Manik"
+                  width={40}
+                  height={40}
+                />
                 <AvatarFallback>Manik</AvatarFallback>
               </Avatar>
 
