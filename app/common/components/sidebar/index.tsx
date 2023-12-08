@@ -26,7 +26,7 @@ export default function Sidebar(props: Props) {
             <div>
               <Avatar className="w-[6rem] h-[6rem] ">
                 <AvatarImage
-                  src="/vitomanik.jpg"
+                  src="/vitomanik.webp"
                   className="hover:scale-105 transition-all ease-in-out"
                 />
                 <AvatarFallback>Vito Manik</AvatarFallback>
