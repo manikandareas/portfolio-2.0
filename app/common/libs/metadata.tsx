@@ -19,4 +19,16 @@ export const NextMetadata: Metadata = {
   },
   description:
     "Personal website Vito Andareas Manik, build with Next.js, Shadncn UI, and TailwindCSS.",
+  keywords: [
+    "Vito Manik",
+    "Vito Andareas Manik",
+    "Portfolio",
+    "Personal Website",
+    "Next.js",
+    "Next.js 14",
+    "TypeScript",
+    "TailwindCSS",
+    "Shadcn UI",
+  ],
+  authors: [{ name: "Vito Andareas Manik", url: "https://vitomanik.com" }],
 };
