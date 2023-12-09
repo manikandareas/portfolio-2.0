@@ -21,7 +21,7 @@ export default function Sidebar(props: Props) {
   return (
     <>
       {isMobile ? null : (
-        <aside className="sticky transition-all duration-300 top-0 z-10 flex flex-col gap-4 lg:py-8">
+        <aside className="lg:sticky transition-all bg-background lg:bg-transparent duration-300 top-0 z-10 flex flex-col gap-4 lg:py-8 md:p-8">
           <header className="space-y-4">
             <div>
               <Avatar className="w-[6rem] h-[6rem] ">

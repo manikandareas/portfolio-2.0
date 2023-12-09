@@ -59,14 +59,14 @@ export const MENU_ITEMS: MenuItemProps[] = [
     type: "Pages",
     isExternal: false,
   },
-  {
-    title: "Playground",
-    href: "/playground",
-    icon: <SiJavascript />,
-    isShow: true,
-    type: "Pages",
-    isExternal: false,
-  },
+  // {
+  //   title: "Playground",
+  //   href: "/playground",
+  //   icon: <SiJavascript />,
+  //   isShow: true,
+  //   type: "Pages",
+  //   isExternal: false,
+  // },
 ];
 
 export const SOCIAL_MEDIA: MenuItemProps[] = [

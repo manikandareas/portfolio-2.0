@@ -17,9 +17,10 @@ import {
 } from "../ui/sheet";
 import { Separator } from "../ui/separator";
 import useIsMobile from "../../hooks/useIsMobile";
-type Props = {};
 
-export default function Header({}: Props) {
+import { AnimatePresence, motion } from "framer-motion";
+
+export default function Header() {
   const filteredMenu = MENU_ITEMS.filter((item) => item.isShow);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const pathname = usePathname();
@@ -31,11 +32,14 @@ export default function Header({}: Props) {
     }
   }, [isMobile]);
   return (
-    <>
+    <AnimatePresence>
       {isMobile && (
-        <header
+        <motion.header
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ x: -100, opacity: 0 }}
           className={cn(
-            "bg-background flex items-center sticky top-0 z-50 border-b"
+            "bg-background flex items-center sticky top-0 z-50 border-b transition-all ease-in-out"
           )}
         >
           <div className="flex justify-between w-full p-4">
@@ -138,8 +142,8 @@ export default function Header({}: Props) {
               </Sheet>
             </div>
           </div>
-        </header>
+        </motion.header>
       )}
-    </>
+    </AnimatePresence>
   );
 }
