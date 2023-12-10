@@ -5,7 +5,7 @@ export const projects = [
     title: "vitomanik.com",
     is_featured: true,
     description:
-      "Personal website built from scratch using Next.js 14, inspired by <a title='aulianza.id' href='https://aulianza.id/' target='_blank' rel='noreferrer'>Ryan Aulia</a>.",
+      "Personal website built from scratch using Next.js 14, inspired by <a title='aulianza.id' href='https://aulianza.id/' target='_blank' rel='noreferrer'><u>Ryan Aulia</u></a>.",
     link_demo: "https://vitomanik.com",
     link_github: "https://github.com/manikandareas/portfolio-2.0",
     slug: "vitomanik-com",

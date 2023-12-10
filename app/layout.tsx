@@ -11,6 +11,7 @@ import QueryClientProvider from "./common/components/QueryClientProvider";
 import { NextMetadata } from "./common/libs/metadata";
 import BannerProvider from "./common/components/BannerProvider";
 import Banner from "./common/components/Banner";
+import Opener from "./common/components/Opener";
 
 export const metadata: Metadata = NextMetadata;
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         >
           <QueryClientProvider>
             <BannerProvider>
+              <Opener />
               <Banner />
               <Header />
               <Layout>{children}</Layout>
