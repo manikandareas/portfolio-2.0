@@ -9,6 +9,8 @@ import "aos/dist/aos.css";
 import Layout from "./common/components/layout";
 import QueryClientProvider from "./common/components/QueryClientProvider";
 import { NextMetadata } from "./common/libs/metadata";
+import BannerProvider from "./common/components/BannerProvider";
+import Banner from "./common/components/Banner";
 
 export const metadata: Metadata = NextMetadata;
 
@@ -32,8 +34,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <QueryClientProvider>
-            <Header />
-            <Layout>{children}</Layout>
+            <BannerProvider>
+              <Banner />
+              <Header />
+              <Layout>{children}</Layout>
+            </BannerProvider>
           </QueryClientProvider>
         </ThemeProvider>
         <AOS />

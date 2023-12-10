@@ -12,16 +12,15 @@ import MenuItem from "./MenuItem";
 import { MenuItemProps } from "../../definition/menu";
 import { MENU_ITEMS } from "../../constant/menu";
 import Copyright from "../Copyright";
-type Props = {};
 
-export default function Sidebar(props: Props) {
+export default function Sidebar() {
   const isMobile = useIsMobile();
   const pathname = usePathname();
   const filteredMenu = MENU_ITEMS.filter((item) => item.isShow);
   return (
     <>
       {isMobile ? null : (
-        <aside className="lg:sticky transition-all bg-background lg:bg-transparent duration-300 top-0 z-10 flex flex-col gap-4 lg:py-8 md:p-8">
+        <aside className="lg:sticky transition-all bg-background lg:bg-transparent duration-300 top-0 z-10 flex flex-col gap-4 lg:py-8 lg:px-0 md:p-8">
           <header className="space-y-4">
             <div>
               <Avatar className="w-[6rem] h-[6rem] ">

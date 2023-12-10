@@ -12,7 +12,7 @@ export default function Introduction({}: Props) {
         </div>
         <div className="space-y-4">
           <ul className="flex flex-col lg:flex-row gap-1 lg:gap-10 ml-5 list-disc text-neutral-700 dark:text-neutral-400">
-            <li>Working Remotely</li>
+            <li>Still in the learning stage</li>
             <li>
               Based in Samarinda, Indonesia <span className="ml-1">🇮🇩</span>
             </li>
