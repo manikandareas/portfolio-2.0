@@ -2,6 +2,22 @@ import { ProjectItemProps } from "../definition/projects";
 
 export const projects = [
   {
+    title: "{ News } App",
+    is_featured: true,
+    description:
+      "Website berita dengan fitur authentikasi dan manajement beruta untuk editor. Terhubung dengan API dari beberap Media besar di indonesia",
+    link_demo: "https://news-app-git-main-manikxixis-projects.vercel.app/",
+    link_github: "https://github.com/manikandareas/news-app",
+    slug: "news-app",
+    image: "/images/projects/news-app.png",
+    is_show: true,
+    stacks: ["Next.js", "React.js", "TailwindCSS", "TypeScript"],
+    created_at: new Date(),
+    content:
+      "Website berita dengan fitur authentikasi dan manajement beruta untuk editor. Terhubung dengan API dari beberapa Media Besar di indonesia, dibuat dengan Nextjs 14, Shadcn UI, Tanstack Query, Drizzle ORM, TailwindCSS, Neon Database serta library lainnya.",
+    updated_at: new Date(),
+  },
+  {
     title: "vitomanik.com",
     is_featured: true,
     description:
